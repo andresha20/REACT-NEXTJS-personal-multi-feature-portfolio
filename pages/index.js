@@ -1,65 +1,35 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Sidebar from '../components/Sidebar/Sidebar'
+import SectionOne from '../components/Sections/SectionOne'
+import SectionTwo from '../components/Sections/SectionTwo'
+import SectionThree from '../components/Sections/SectionThree'
+import SectionFour from '../components/Sections/SectionFour'
+import useStyles from '../src/IndexStyles'
+
+import { useGlobalContext } from '../components/Context/theme'
+
+
+// const LoadingComponent = dynamic(() => import('../components/Loading/Loading'), { loading: () => <p>LOADING 2...</p> })
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  
+    const { themeColor } = useGlobalContext();
+    const classes = useStyles(themeColor);
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+    return (
+    <div className={classes.mainWrapper}>
+      <div className={classes.leftColumn}>
+        <Sidebar content="blbla@gmail.com"/>
+      </div>      
+      <div className={classes.mainColumn}>
+        {/* <LoadingComponent /> */}
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree />
+        <SectionFour />
+      </div>      
+      <div className={classes.rightColumn}>
+      <Sidebar content="test"/>
+      </div>
     </div>
   )
 }
