@@ -71,17 +71,17 @@ const Navbar = () => {
                 <div className={classes.menu}>
                         <Link href='#about'>
                             <div className={classes.menuItem}>
-                                <a className={classes.link}><span className={classes.span}>01.&nbsp;</span>{currentLanguage.navigation.menuItems[0]}</a>
+                                <p className={classes.link}><span className={classes.span}>01.&nbsp;</span>{currentLanguage.navigation.menuItems[0]}</p>
                             </div>                    
                         </Link>   
                         <Link href='#work'>
                             <div className={classes.menuItem} >
-                                <a className={classes.link}><span className={classes.span}>02.&nbsp;</span>{currentLanguage.navigation.menuItems[1]}</a>
+                                <p className={classes.link}><span className={classes.span}>02.&nbsp;</span>{currentLanguage.navigation.menuItems[1]}</p>
                             </div>                    
                         </Link>
                         <Link href='#contact'>
                             <div className={classes.menuItem}>
-                                <a className={classes.link}><span className={classes.span}>03.&nbsp;</span>{currentLanguage.navigation.menuItems[2]}</a>
+                                <p className={classes.link}><span className={classes.span}>03.&nbsp;</span>{currentLanguage.navigation.menuItems[2]}</p>
                             </div>                    
                         </Link>   
                 </div>

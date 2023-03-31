@@ -44,7 +44,7 @@ const CustomSelect = () => {
             <div className={classes.goBack}>
                 <ArrowBackIosRoundedIcon style={{ color: themeColor.neonColor }}/>
                 <Link href='/'>
-                    <a style={{ textDecoration: 'none', fontWeight: 'bold', color: themeColor.neonColor }}>{currentLanguage.select.goBack}</a>
+                    <p style={{ textDecoration: 'none', fontWeight: 'bold', color: themeColor.neonColor }}>{currentLanguage.select.goBack}</p>
                 </Link>
             </div>
             <div className={classes.root}>

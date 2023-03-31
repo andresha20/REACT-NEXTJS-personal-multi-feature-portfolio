@@ -71,16 +71,14 @@ const SectionThree = () => {
                         <Grid container key={element.id} spacing={5} style={{ padding: '20px 0px 20px 0px', backgroundColor: themeColor.backgroundColor, flexDirection: element.id % 2 === 0 && 'row-reverse' }}>
                         <Grid item xs={12} sm={6}>
                             <Box component='div'>
-                                <Link href={element.link} rel="noopener noreferrer">
-                                    <a target='_blank'>
-                                        <Image className={classes.projectImages}
-                                            src={element.src}
-                                            alt={element.alt}
-                                            width={579}
-                                            height={360}
-                                        />
-                                        <ExitToAppRoundedIcon size='large' style={{ color: themeColor.neonColor }}/>
-                                    </a>
+                                <Link target={'_blank'} href={element.link} rel="noopener noreferrer">
+                                    <Image className={classes.projectImages}
+                                        src={element.src}
+                                        alt={element.alt}
+                                        width={579}
+                                        height={360}
+                                    />
+                                    <ExitToAppRoundedIcon size='large' style={{ color: themeColor.neonColor }}/>
                                 </Link>
                             </Box>
                         </Grid>                        
