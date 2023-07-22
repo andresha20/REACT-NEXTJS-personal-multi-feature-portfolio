@@ -15,10 +15,10 @@ const Cart = () => {
     const classes = useStyles(themeColor);
     const [shoppingCartProducts, setShoppingCartProducts] = useState([])
     const [marketProducts, setMarketProducts] = useState([
-        { name: 'Sandwich', src: '/images/sandwich.png', id: '01', stock: 5, price: 2.75, orders: 1, total: 2.75 },
-        { name: 'Sushi', src: '/images/sushi.png', id: '02', stock: 7, price: 1.25, orders: 1, total: 1.25 },
-        { name: 'Apple', src: '/images/apple.png', id: '03', stock: 6, price: 0.75, orders: 1, total: 0.75 },
-        { name: 'Noodles', src: '/images/noodles.png', id: '04', stock: 3, price: 4.75, orders: 1, total: 4.75 }
+        { name: 'Sandwich', src: '/Images/sandwich.png', id: '01', stock: 5, price: 2.75, orders: 1, total: 2.75 },
+        { name: 'Sushi', src: '/Images/sushi.png', id: '02', stock: 7, price: 1.25, orders: 1, total: 1.25 },
+        { name: 'Apple', src: '/Images/apple.png', id: '03', stock: 6, price: 0.75, orders: 1, total: 0.75 },
+        { name: 'Noodles', src: '/Images/noodles.png', id: '04', stock: 3, price: 4.75, orders: 1, total: 4.75 }
     ])
 
     const addToCart = (productID) => {
@@ -75,10 +75,10 @@ const Cart = () => {
     const clearCart = () => {
         setShoppingCartProducts([]);
         return setMarketProducts([
-            { name: 'Sandwich', src: '/images/sandwich.png', id: '01', stock: 5, price: 2.75, orders: 1, total: 2.75 },
-            { name: 'Sushi', src: '/images/sushi.png', id: '02', stock: 7, price: 1.25, orders: 1, total: 1.25 },
-            { name: 'Apple', src: '/images/apple.png', id: '03', stock: 6, price: 0.75, orders: 1, total: 0.75 },
-            { name: 'Noodles', src: '/images/noodles.png', id: '04', stock: 3, price: 4.75, orders: 1, total: 4.75 }
+            { name: 'Sandwich', src: '/Images/sandwich.png', id: '01', stock: 5, price: 2.75, orders: 1, total: 2.75 },
+            { name: 'Sushi', src: '/Images/sushi.png', id: '02', stock: 7, price: 1.25, orders: 1, total: 1.25 },
+            { name: 'Apple', src: '/Images/apple.png', id: '03', stock: 6, price: 0.75, orders: 1, total: 0.75 },
+            { name: 'Noodles', src: '/Images/noodles.png', id: '04', stock: 3, price: 4.75, orders: 1, total: 4.75 }
         ]);
     }
 
@@ -98,7 +98,7 @@ const Cart = () => {
                 <Paper className={classes.customSelect} elevation={1} align='center' >
                     <div className={classes.image}>
                         <Image 
-                            src='/images/market.png'
+                            src='/Images/market.png'
                             alt='Market'
                             height={150}
                             width={150}
@@ -137,7 +137,7 @@ const Cart = () => {
                 <Paper className={classes.customSelect} elevation={1}>
                     <div className={classes.image}>
                         <Image 
-                            src='/images/shoppingCart.png'
+                            src='/Images/shoppingCart.png'
                             alt='Shopping Cart'
                             height={150}
                             width={150}
